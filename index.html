@@ -1,844 +1,733 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="icon" type="image/x-icon" href="bigElogo.png">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/bigElogo.png">
+    <title>Cocktails</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
-    <title>Рейтинг Сереалов и Фильмов</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CO:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playwrite+CO:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Playwrite+CO:wght@100..400&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="container-fluid bg-body-secondary">
-    <div class="row d-flex">
-        <div class="title-container">Movies and Series</div>
+    <div class="container-fluid bg-body-secondary">
+    <div class="row">
 
+        <nav class="navbar navbar-light bg-body-secondary">
+            <a href="egorkryvoi.pl"><img src="img/bigElogo.png" class="img-fluid logo"></a>
+            <div class="cocktails">Cocktails</div>
+        </nav>
+        <div class="search-bar col-sm-12 col-md-2 col-lg-2 ">
+                <section class="d-flex">
+                    <div class="hyperlink-button mt-3 px-3 py-3" id="cocktails">Cocktails</div>
+                    <div class="hyperlink-button mt-3 px-3 py-3" id="shots">Shots</div>
+                </section>
+                <input type="text" id="search-input" class="search col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 px-2 pt-1 pb-1"  placeholder="Search...">
+                <div  style="display: flex; flex-wrap: wrap;">
 
-        <div class="search-category-container col-sm-12 col-md-2 col-lg-2">
-            <input type="text" id="search-input" class="search col-sm-12 col-md-12" placeholder="Search movie...">
-            <div class="categories">
-                <a href="index.html" class="category" onclick="">All movies</a>
-                <a href="categories/comedy.html" class="category" onclick="">Comedy</a>
-                <a href="categories/horror.html" class="category" onclick="">Horror</a>
-                <a href="categories/romance.html" class="category" onclick="">Romance</a>
-                <a href="categories/action.html" class="category" onclick="">Action</a>
-                <a href="categories/thriller.html" class="category" onclick="">Thriller</a>
-                <a href="categories/drama.html" class="category" onclick="">Drama</a>
-                <a href="categories/documentaries.html" class="category" onclick="">Documentaries</a>
-                <a href="categories/sci-fi.html" class="category" onclick="">Sci-Fi</a>
-                <a href="categories/fantasy.html" class="category" onclick="">Fantasy</a>
-                <a href="categories/crime.html" class="category" onclick="">Crime</a>
-                <a href="categories/anime.html" class="category" onclick="">Anime</a>
-                <a href="categories/adventure.html" class="category" onclick="">Adventure</a>
-                <a href="categories/historical.html" class="category" onclick="">Historical</a>
-                <a href="categories/war.html" class="category" onclick="">War</a>
+                    <p class="ingredients-title w-100 mx-auto">Fruits</p>
+                        <div class="ingredients" data-name="Orange">Orange <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Lime">Lime <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Lemon">Lemon <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Passion fruit">Passion fruit <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Pineapple">Pineapple <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Grapefruit">Grapefruit <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Peach">Peach <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Raspberry">Raspberry <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Cranberry">Cranberry <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Olives">Olives<i class="bi bi-x remove-icon"></i></div>
+                    <p class="ingredients-title w-100 mx-auto">Alcohols</p>
+                        <div class="ingredients" data-name="Passoa liqueur">Passoa liqueur <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Whiskey">Whiskey <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Bourbon">Bourbon <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Sambuca">Sambuca <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Abscenthe">Abscenthe <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Peach liqueur">Peach liqueur <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Jagermeister">Jagermeister <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Coffee liqueur">Coffee liqueur <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Coconut liqueur">Coconut liqueur <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Cachaça">Cachaça <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Elderflower liqueur">Elderflower liqueur <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Tequila">Tequila <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Baileys">Baileys <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Vodka">Vodka <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Vanilia Vodka">Vanilia Vodka <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Angostura Bitters">Angostura Bitters <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Triple sec">Triple sec<i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="White rum">White rum <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Black rum">Black rum <i class="bi bi-x remove-icon"></i></div>  
+                        <div class="ingredients" data-name="Gin">Gin<i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Aperol liquer">Aperol liquer <i class="bi bi-x remove-icon"></i></div>  
+                        <div class="ingredients" data-name="Prosecco">Prosecco <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Campari bitters">Campari bitters<i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Sweet Vermouth">Sweet Vermouth<i class="bi bi-x remove-icon"></i></div>
+                        <div class="ingredients" data-name="Extra Dry Vermouth">Extra Dry Vermouth (white)<i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Red wine">Red wine<i class="bi bi-x remove-icon"></i></div> 
+                    <p class="ingredients-title w-100 mx-auto">Syrups</p>
+                        <div class="ingredients" data-name="Peach puree">Peach puree <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Simple syrup">Simple Syrup <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Vanilia syrup">Vanilia syrup <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Passion fruit syrup">Passion fruit syrup <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Coconut syrup">Coconut syrup <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Grenadine">Grenadine <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Blue curacao">Blue curacao <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Elderflower syrup">ElderFlower Syrup <i class="bi bi-x remove-icon"></i></div>
+                        <div class="ingredients" data-name="Agave syrup">Agave Syrup <i class="bi bi-x remove-icon"></i></div>
+                        <div class="ingredients" data-name="Cranberry syrup">Cranberry Syrup <i class="bi bi-x remove-icon"></i></div>
+                    <p class="ingredients-title w-100 mx-auto">Juices</p>
+                        <div class="ingredients" data-name="Pineapple juice">Pineapple juice <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Orange juice">Orange juice <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Lemon juice">Lemon juice <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Lime juice">Lime juice <i class="bi bi-x remove-icon"></i></div> 
+                    <p class="ingredients-title w-100 mx-auto">Another</p>
+                        <div class="ingredients" data-name="Mint">Mint <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Salt">Salt <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Espresso">Espresso <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Coffee beans">Coffee beans <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Orange zest">Orange zest <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Cherry">Cherry <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Egg white">Egg white <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Lemon zest">Lemon zest <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Cranberry">Cranberry <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Shweppes bitter lemon">Shweppes bitter lemon <i class="bi bi-x remove-icon"></i></div>
+                        <div class="ingredients" data-name="Sparkling water">Sparkling Water <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Sprite">Sprite <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Coca cola">Coca cola <i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Olives brine">Olives brine<i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Rosemary">Rosemary<i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Milk">Milk<i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Coffee beans">Coffee beans<i class="bi bi-x remove-icon"></i></div> 
+                        <div class="ingredients" data-name="Basil">Basil<i class="bi bi-x remove-icon"></i></div> 
+
+                </div>
+            </div>
+
+    <div class="container col-lg-10 col-md-10 col-sm-10">
+    <div class="row mx-3 cocktails-container">
+                <div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3 " data-name="Aperol Spritz">
+                    <img class="img-fluid img " src="img/aperol.png" alt="Cocktail img">
+                    <div class="cocktail-name">Aperol Spritz</div>
+                    <div class="contains">                 
+                        <div class="ingredient" data-name="Prosecco"><b>160ml</b> - Prosecco</div>                    
+                        <div class="ingredient" data-name="Aperol liquer"><b>60ml</b> - Aperol</div>                    
+                        <div class="ingredient" data-name="Sparkling water">Top up water</div>                    
+                        <div class="ingredient" data-name="Orange">Garnish: piece of orange</div>                    
+                </div>
+            </div>
+
+            <div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3 " data-name="Cuba Libre">
+                <img class="img-fluid img " src="img/cuba libre.png" alt="Cocktail img">
+                <div class="cocktail-name">Cuba Libre</div>
+                <div class="contains">                                 
+                    <div class="ingredient" data-name="Lime"><b>3 Lime pieces</b></div>                    
+                    <div class="ingredient" data-name="White rum" ><b>40ml</b> - white/black rum</div>                    
+                    <div class="ingredient" data-name="Coca cola">Top up Coca Cola</div>  
+                    <div class="ingredient" data-name="Lime">Garnish: lime piece</div>                                        
             </div>
         </div>
-    
 
-        <div class="container col-sm-12 col-md-10 col-lg-10">
-            <div class="row">
-                <a href="https://hdrezka.ag/series/comedy/29558-polovoe-vospitanie-2019.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Sex Education">
-                    <img src="img/sexeducation.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Sex Education</div>
-                </a>
-                <a href="https://hdrezka.ag/series/drama/31153-eyforiya-2019.html#t:111-s:1-e:1" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Euphoria ">
-                    <img src="img/euphoria.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Euphoria</div>
-                </a>
-                <a href="https://hdrezka.ag/cartoons/fantasy/10859-avatar-legenda-ob-aange-2005.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Аватар Аанг">
-                    <img src="img/aang.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Aватар Аанг</div>  
-                </a>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="Призрачный Гонщик">
-                    <img src="img/ghostrider.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Призрачный гонщик</div>
-                    <div class="part">
-                        <a href="https://hdrezka.ag/films/fantasy/1113-prizrachnyy-gonschik-2007.html" class="number-part d-block" target="blank_">1 часть</a>
-                        <a href="https://hdrezka.ag/films/fantasy/1114-prizrachnyy-gonschik-2-2012.html" class="number-part d-block" target="blank_">2 часть</a>
-                    </div>
-                    
-                </div>
-                <a href="https://hdrezka.ag/films/western/15-dzhango-osvobozhdennyy-2012.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Джанго освобожденный">
-                    <img src="img/jungounchained.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Джанго освобожденный</div>
-                    
-                </a>
-
-                <a href="https://hdrezka.ag/cartoons/fiction/11319-zvezdnye-voyny-voyny-klonov-2008-latest.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Звёздные войны:Война клонов" >
-                    <img src="img/clone wars.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Звёздные войны:Война клонов</div>
-                    
-                </a>
-                <a href="https://kinogo.biz/11487-zvezdnye-vojny-povstancy.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Звёздные войны: Повстанцы">
-                    <img src="img/rebels.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Звёздные войны: Повстанцы</div>
-                    
-                </a>
-                <a href="https://www.youtube.com/watch?v=HHAb-4Bmz70&list=PLWl-8R8R7K4NGUVF_o-P0Vfan755bAnDD" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="СТС Кухня">
-                    <img src="img/кухня.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">СТС Кухня</div>
-                    
-                </a>
-                <a href="https://simpsonsua.tv/futurama/" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Футурама">
-                    <img src="img/futurama.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Футурама</div>
-                    
-                </a>
-                <a href="https://www.youtube.com/watch?v=EBr6f8xp8Is" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Слуга Народа">
-                    <img src="img/Слуганарода.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Слуга Народа</div>
-                </a>
-
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="Lord of the Rings LOTR лотр">
-                    <img src="img/lotr.jpg" class="img-fluid rounded"alt="" >
-                    <div class="title-card">Lord of the Rings</div>
-                    <div class="part">
-                        <a href="https://kinogo.media/11525-vlastelin-kolec-bratstvo-kolca.html" class="number-part d-block">1 "The Fellowship of the Ring"</a>
-                        <a href="https://kinogo.media/11516-vlastelin-kolec-dve-kreposti.html" class="number-part d-block">2 "The Two Towers"</a>
-                        <a href="https://kinogo.media/2941-vlastelin-kolec-vozvraschenie-korolja.html" class="number-part d-block">3 "The Return of the King"</a>
-                    </div>
-                    
-                </div>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="The Hobbit Хоббит">
-                    <img src="img/hobbit.jpg" class="img-fluid rounded"alt="" >
-                    <div class="title-card">The Hobbit</div>
-                    <div class="part">
-                        <a href="https://kinogo.media/153-hobbit-nezhdannoe-puteshestvie-2012.html" class="number-part d-block" target="blank_">1 "An Unexpected Journey"</a>
-                        <a href="https://kinogo.media/152-hobbit-pustosh-smauga.html" class="number-part d-block" target="blank_">2 "The Desolation of Smaug"</a>
-                        <a href="https://kinogo.media/151-hobbit-bitva-pjati-voinstv.html" class="number-part d-block" target="blank_">3 " The Battle of the Five Armies"</a>
-                    </div>
-                    
-                </div>
-                <a href="https://kinogo.io/7522-serial-timon-i-pumba-5-sezon.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Тимон И пумба">
-                    <img src="img/timonipumba.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Тимон И пумба</div>
-                    
-                </a>
-                <a href="https://uaserials.pro/1481-nindzyago-maystry-spinzhytsu-lego.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Lego Ninjago">
-                    <img src="img/lego ninjago.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Lego Ninjago</div>
-                   
-                </a>
-                <a href="https://kinogo.inc/cartoons/9309-rycari-nekso.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Lego Nexo-knights">
-                    <img src="img/lego nexoknights.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Lego Nexo-knights</div>
-                    
-                </a>
-
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3"data-name="Неудержимые">
-                    <img src="img/expendables.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Неудержимые</div>
-                    <div class="part">
-                        <a href="https://kinogo.biz/21017-neuderzhimye-2010-n2.html" class="number-part d-block" target="blank_">1 часть</a>
-                        <a href="https://kinogo.biz/16973-neuderzhimye-2-2012-hd.html" class="number-part d-block" target="blank_">2 часть</a>
-                        <a href="https://kinogo.biz/26795-neuderzhimye-3-2014-4.html" class="number-part d-block" target="blank_">3 часть</a>
-                        <a href="https://kinogo.biz/56772-neuderzhimye-4-2023.html" class="number-part d-block" target="blank_">4 часть</a>
-                    </div>
-                </div>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="Оно">
-                    <img src="img/ono.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Оно</div>
-                    <div class="part">
-                        <a href="https://kinogo.film/films/305-ono.html" class="number-part d-block" target="blank_">1 часть</a>
-                        <a href="https://kinogo.inc/films/784-ono-2-new-v5-lp7.html" class="number-part d-block" target="blank_">2 часть</a>
-                    </div>
-                </div>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="Заклятье">
-                    <img src="img/conjurning.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Заклятье</div>
-                    <div class="part">
-                        <a href="https://kinogo.biz/19682-zakljatie.html" class="number-part d-block" target="blank_">1 часть</a>
-                        <a href="https://kinogo.biz/14270-zakljatie-2-2016.html" class="number-part d-block" target="blank_">2 часть</a>
-                        <a href="https://kinogo.biz/49180-zaklyatie-3-po-vole-diyavola-2021-z2.html" class="number-part d-block" target="blank_">3 часть</a>
-                    </div>
-                </div>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="Пираты Карибского Моря">
-                    <img src="img/pirates.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Пираты Карибского Моря</div>
-                    <div class="part">
-                        <a href="https://kinogo.biz/21792-piraty-karibskogo-morya-proklyatie-chernoj-zhemchuzhiny-hd.html" class="number-part d-block" target="blank_">1 "Проклятье чёрной жемчужены"</a>
-                        <a href="https://kinogo.biz/16739-piraty-karibskogo-morja-sunduk-mertveca.html" class="number-part d-block" target="blank_">2 "Сундук мертвеца"</a>
-                        <a href="https://kinogo.biz/28296-piraty-karibskogo-morja-na-kraju-sveta.html" class="number-part d-block" target="blank_">3 "На краю Света"</a>
-                        <a href="https://kinogo.biz/15311-piraty-karibskogo-morja-na-strannyh-beregah.html" class="number-part d-block" target="blank_">4 "На странный берегах"</a>
-                        <a href="https://kinogo.biz/16372-piraty-karibskogo-morja-mertvecy-ne-rasskazyvajut-skazki.html" class="number-part d-block" target="blank_">5 "Мертвецы не рассказывают сказки"</a>
-                    </div>
-                </div>
-                <a href="https://kinojump.com/132-chernobyl.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Чернобыль ХБО">
-                    <img src="img/chernobylhbo.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Чернобыль ХБО</div>
-                </a>
-           
-            
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="Проклятие монахини The nun">
-                    <img src="img/the nun.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Проклятие монахини</div>
-                    <div class="part">
-                        <a href="https://kinogo.biz/15334-prokljatie-monahini.html" class="number-part d-block" target="blank_">1 часть</a>
-                        <a href="https://kinogo.biz/74949-prokljatie-monahini-2.html" class="number-part d-block" target="blank_">2 часть</a>
-                    </div>
-                </div>
-                <a href="https://kinogo.biz/17487-interstellar.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Интерстеллар">
-                    <img src="img/interstellar.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Интерстеллар </div>
-                </a>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="1+1">
-                    <img src="img/1+1.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">1+1</div>
-                    <div class="part">
-                        <a href="https://new.filmhd1080.sbs/952-11-2011-smotret-onlayn.html" class="number-part d-block" target="blank_">1+1</a>
-                        <a href="https://kinogo.inc/films/923-21.html" class="number-part d-block" target="blank_">2+1</a>
-                    </div>
-                </div>
-                <a href="https://kinogo.inc/films/4378-varkraft-hd-liveplus1-v81.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name=">Warcraft Варкрафт">
-                    <img src="img/warcraft.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Warcraft</div>
-                </a>
-                <a href="https://kinogo-films.fm/806-gran-buduschego.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Грань будущего">
-                    <img src="img/граньбудующего.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Грань будущего</div>
-                </a>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="300 Spartans">
-                    <img src="img/300spartancev.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">300 Spartans</div>
-                    <div class="part">
-                        <a href="https://kinogo.biz/20396-300-spartancev.html" class="number-part d-block" target="blank_">300 Spartans</a>
-                        <a href="https://kinogo.biz/24644-300-spartancev-rascvet-imperii.html" class="number-part d-block" target="blank_">Rise of Empire</a>
-                    </div>
-                </div>
-                <a href="https://kinogo.biz/24652-devjat.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="Девятый Nine">
-                    <img src="img/9.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Девятый</div>
-                </a>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Avatar">
-                    <img src="img/avatar.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Avatar</div>
-                    <div class="part">
-                        <a href="https://kinogo.media/9816-avatar.html" class="number-part d-block" target="blank_">Avatar</a>
-                        <a href="https://kinogo-la1.biz/films/1141-avatar-put-vody-2022-smotret-na-kinogo.html" class="number-part d-block" target="blank_">Avatar The way of water</a>
-                    </div>
-                </div>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Avengers">
-                    <img src="img/avengersInfinityWar.png" class="img-fluid rounded"alt="">
-                    <div class="title-card">Avengers</div>
-                    <div class="part">
-                        <a href="https://kinogo.biz/29381-mstiteli.html" class="number-part d-block" target="blank_">Avengers</a>
-                        <a href="https://kinogo.biz/26519-mstiteli-jera-altrona-m1.html" class="number-part d-block" target="blank_">Avengers Age of Ultron</a>
-                        <a href="https://kinogo.biz/23263-mstiteli-vojna-beskonechnosti.html" class="number-part d-block" target="blank_">Avengers Infinity War</a>
-                        <a href="https://kinogo.biz/17554-mstiteli-final-2019-l4.html" class="number-part d-block" target="blank_">Avengers Final</a>
-                    </div>
-                </div>
-                <a href="https://www.youtube.com/watch?v=pdw-mQc1Li8" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="Дефективы">
-                    <img src="img/defektivi.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Дефективы</div>
-                </a>
-                <div  class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="Back to the future">
-                    <img src="img/backtothefuture.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Back to the future</div>
-                    <div class="part">
-                        <a href="https://kinogo.biz/22274-nazad-v-buduschee.html" class="number-part d-block" target="blank_">Back to the future 1</a>
-                        <a href="https://kinogo.biz/24925-nazad-v-buduschee-2.html" class="number-part d-block" target="blank_">Back to the future 2</a>
-                        <a href="https://kinogo.biz/22201-nazad-v-buduschee-3.html" class="number-part d-block" target="blank_">Back to the future 3</a>
-
-                    </div>
-                </div>
-                <a href="https://kinogo.biz/29997-ohotniki-na-vedm.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Witch Hunters Hansel&Gretel Охотники на ведьм">
-                    <img src="img/witchhunters.png" class="img-fluid rounded"alt="">
-                    <div class="title-card">Witch Hunters Hansel&Gretel</div>
-                </a>
-                <a href="https://kinogo.biz/36041-horoshie-malchiki.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Good Boys Хорошие мальчики">
-                    <img src="img/goodboys.png" class="img-fluid rounded"alt="">
-                    <div class="title-card">Good Boys</div>
-                </a>
-                <a href="https://kinogo.biz/11507-graviti-folz.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Gravity Falls Гравити фолз">
-                    <img src="img/gravityfalls.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Gravity Falls</div>
-                </a>
-                <div  class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Как Закалялся Стайл">
-                    <img src="img/kakzakalialsastayl.png" class="img-fluid rounded"alt="">
-                    <div class="title-card">Как Закалялся Стайл</div>
-                    <div class="part">
-                        <a href="https://www.youtube.com/watch?v=jWofRoekBcI" class="number-part d-block" target="blank_">1 Сезон</a>
-                        <a href="https://www.youtube.com/watch?v=zoNU1H7Edjw" class="number-part d-block" target="blank_">2 Сезон</a>
-                    </div>
-                </div>
-
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="Останний Москаль">
-                    <img src="img/ostanniymoskal.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Останний Москаль</div>
-                    <div class="part">
-                        <a href="https://www.youtube.com/watch?v=unK0vT-pLZI" class="number-part d-block" target="blank_">1 Сезон</a>
-                        <a href="https://www.youtube.com/watch?v=qKY-FcBou4I&list=PL4XL0p4tyf-gr-ID9VEGlTlnZ5hfLLF3u" class="number-part d-block" target="blank_">2 Сезон</a>
-                        <a href="https://www.youtube.com/watch?v=QXcWyo_QDnE" class="number-part d-block" target="blank_">3 Сезон</a>
-                    </div>
-                </div>
-                <a href="https://rezka.ag/films/fiction/327-pol-sekretnyy-materialchik-2011.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Paul (2011)">
-                    <img src="img/paul.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Paul (2011)</div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=MYzSdtB0jTo&list=PLnTiu_mbcH73gcDfwca4icFQ2DQlZA4EU"class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Школа">
-                    <img src="img/school.png" class="img-fluid rounded"alt="">
-                    <div class="title-card">Школа</div>
-                </a>
-                <a href="https://kinogo-films.fm/899-jekzorcist-vatikana.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="The Pope's exorcist Экзорцист Ватикана">
-                    <img src="img/thepopesExorcist.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">The Pope's exorcist</div>
-                </a>
-                <div  class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="Terrifier">
-                    <img src="img/terrifier2.png" class="img-fluid rounded"alt="">
-                    <div class="title-card">Terrifier</div>
-                    <div class="part">
-                        <a href="https://rezka.bid/58878-uzhasajuschij.html" class="number-part d-block" target="blank_">Terrifier 1</a>
-                        <a href="https://rezka.ag/ua/films/horror/51189-uzhasayuschiy-2-2022.html" class="number-part d-block" target="blank_">Terrifier 2</a>
-                    </div>
-                </div>
-            
-
-            
-                <div  class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="Sinister">
-                    <img src="img/sinister.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Sinister</div>
-                    <div class="part">
-                        <a href="https://kinogo.biz/16537-sinister.html" class="number-part d-block" target="blank_">Sinister 1</a>
-                        <a href="https://kinogo.biz/24269-sinister-2.html" class="number-part d-block" target="blank_">Sinister 2</a>
-                        <a href="https://kinogo.biz/56245-sinister-nachalo.html" class="number-part d-block" target="blank_">Sinister Begining(3)</a>
-                    </div>
-                </div>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="СышишьШоу">
-                    <img src="img/sishishshow.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">СышишьШоу</div>
-                    <div class="part">
-                        <a href="https://www.youtube.com/watch?v=Pe6XRocn6Kc" class="number-part d-block" target="blank_"> 1 сезон</a>
-                        <a href="https://www.youtube.com/watch?v=CSA2q6b0X9A&list=PLXYF3_PI90skFheN8WlI6VtmSInoIYIsp" class="number-part d-block" target="blank_"> 2 сезон</a>
-                    </div>
-                </div>
-                <a href="https://www.youtube.com/watch?v=KE9woFAbfnk" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="СышишьШоуБар">
-                    <img src="img/sishishshowbnar.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">СышишьШоуБар</div>
-                </a>
-                <a href="https://kinogo.biz/53495-chelovek-pauk-net-puti-domoi-2021.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Spider Man: No way Home">
-                    <img src="img/spidermannowayhome.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Spider Man: No way Home</div>
-                </a>
-                <a href="https://rezka.ag/ua/films/action/25923-tor-ragnarek-2017.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Thor: Ragnarek">
-                    <img src="img/ragnarok.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Thor: Ragnarek</div>
-                </a>
-                <a href="https://kinogo.biz/29491-malysh-na-drajve.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Малыш на драйве">
-                    <img src="img/malishnadrive.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Малыш на драйве</div>
-                </a>
-                <a href="https://kinogo.biz/11359-cherepashki-nindzja.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Черепашки Ниндзя">
-                    <img src="img/turtlesninja.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Черепашки Ниндзя</div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=DlODZMzY5uA&list=PLa0ncOvX1CxTO1QLlDhhD2J8YS5rkH3Ci" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3"" data-name="Баллада о бомбере">
-                    <img src="img/ballada o bombere.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Баллада о бомбере</div>
-                </a>
-                <div  class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Шрек">
-                    <img src="img/shrek.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Шрек</div>
-                    <div class="part">
-                        <a href="https://kinogo.biz/11219-shrjek.html" class="number-part d-block" target="blank_">1 часть</a>
-                        <a href="https://kinogo.biz/10980-shrjek-2.html" class="number-part d-block" target="blank_">2 часть</a>
-                        <a href="https://kinogo.biz/10721-shrjek-navsegda.html" class="number-part d-block" target="blank_">3 часть</a>
-                    </div>
-                </div>
-                <a href="https://kinogo.biz/18175-tor-2-carstvo-tmy.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_"data-name="Тор 2: Царство тьмы" >
-                    <img src="img/thor.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Тор 2: Царство тьмы</div>
-                </a>
-            </div>
-
-                <div class="mark-point">50 <div></div></div>
-
-            <div class="row">
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Agent xXx (3x)">
-                    <img src="img/3x.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Agent xXx (3x)</div>
-                    <div class="part">
-                        <a href="https://kinogo.biz/21197-tri-iksa.html" class="number-part d-block" target="blank_">1 часть</a>
-                        <a href="https://kinogo.biz/29985-tri-iksa-2-novyj-uroven.html" class="number-part d-block" target="blank_">2 часть</a>
-                        <a href="https://kinogo.biz/11881-tri-iksa-mirovoe-gospodstvo.html" class="number-part d-block" target="blank_">3 часть</a>
-                    </div>
-                </div>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Death Race">
-                    <img src="img/smertelnayagonka.webp" class="img-fluid rounded"alt="">
-                    <div class="title-card">Death Race</div>
-                    <div class="part">
-                        <a href="https://kinogo.biz/20660-smertelnaja-gonka.html" class="number-part d-block" target="blank_">1 часть</a>
-                        <a href="https://kinogo.biz/14960-smertelnaja-gonka-2-frankenshtejn-zhiv.html" class="number-part d-block" target="blank_">2 часть</a>
-                        <a href="https://kinogo.biz/18730-smertelnaja-gonka-3-ad.html" class="number-part d-block" target="blank_">3 часть</a>
-                    </div>
-                </div>
-                <a href="https://kinogo.biz/52866-doktor-strjendzh-i-multivselennaja-bezumija-2022.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" data-name="Doctor Strange 2">
-                    <img src="img/doctorstrange2.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Doctor Strange 2</div>
-                </a>
-                <a href="https://kinogo.biz/18175-tor-2-carstvo-tmy.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="X-Man: The days of future">
-                    <img src="img/ludix.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">X-Man: The days of future</div>
-                </a>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="DeadPool Дедпул">
-                    <img src="img/deadpool.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">DeadPool</div>
-                    <div class="part">
-                        <a href="https://kinogo.biz/28411-djedpul.html" class="number-part d-block" target="blank_">Deadpool</a>
-                        <a href="https://kinogo.biz/25238-dedpul-2.html" class="number-part d-block" target="blank_">Deadpool 2 </a>
-                    </div>
-                    </div>
-                <a href="https://kinogo-la.org/films/22997-prokljatie-plachuschej-2018-kinogo-smotret-online-hd.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_ " data-name="La IIrona">
-                        <img src="img/laiirona.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">La IIrona</div>
-                </a>
-                <a href="https://kinogo.biz/16332-ostrov-sokrovisch.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Остров сокровищь">
-                    <img src="img/ostrovsokrovisch.webp" class="img-fluid rounded"alt="">
-                    <div class="title-card">Остров сокровищь</div>
-                </a>
-                <a href="https://kinogo.biz/25067-zhivaja-stal.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Real Steel">
-                    <img src="img/realsteel.jpg" class="img-fluid rounded"alt="" >
-                    <div class="title-card">Real Steel</div>
-                </a>
-                <a href="https://kinogo.biz/109628-kosmonavt.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Spaceman">
-                    <img src="img/spaceman.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Spaceman</div>
-                </a>        
-                <a href="https://kinogo.biz/24627-tor.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Тор 1">
-                    <img src="img/thor1.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Тор 1</div>
-                </a>
-                <a href="https://rezka.ag/films/horror/16712-viy-1967.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Вий 1">
-                    <img src="img/viy1.webp" class="img-fluid rounded"alt="">
-                    <div class="title-card">Вий 1</div>
-                </a>
-                <a href="https://rezka.ag/films/fantasy/1139-viy-2014.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Вий 2">
-                    <img src="img/viy2.jpg" class="img-fluid rounded"alt="" >
-                    <div class="title-card">Вий 2</div>
-                </a>
-                <a href="https://rezka.ag/films/musical/18115-vechera-na-hutore-bliz-dikanki-2001.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Вечера на хуторе близь диканьки">
-                    <img src="img/vechera.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Вечера на хуторе близь диканьки</div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=ecbnFDl5mLI" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Внутри лапенко">
-                    <img src="img/vnutlilapenko.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Внутри лапенко</div>
-                </a>
-                <a href="https://rezka.ag/animation/adventures/1979-naruto-uragannye-hroniki-2007.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Наруто">
-                    <img src="img/naruto.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Наруто</div>
-                </a>
-                <a href="https://hdrezka.ag/cartoons/fantasy/98-ronal-varvar-2011.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Ронал Варвар">
-                    <img src="img/ronan warwar.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Ронал Варвар</div>
-                </a>
-                <a href="https://kinogo.biz/32751-transformery-prajm.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Трансформер прайм">
-                    <img src="img/transformer prime.webp" class="img-fluid rounded"alt="">
-                    <div class="title-card">Трансформер прайм</div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=596TweOfUcU" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Швидка">
-                    <img src="img/shvidka.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Швидка</div>
-                </a>
-                <a href="https://www.youtube.com/results?search_query=%D0%BE%D0%B3%D0%B3%D0%B8+%D0%B8+%D0%BA%D1%83%D0%BA%D0%B0%D1%80%D0%B0%D1%87%D0%B8" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Oggy and cockroaches">
-                    <img src="img/oggy.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Oggy and Cockroaches</div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=gV2urK7B7pA&list=PL3MMJdvVvtOHxFy8mCO4cM-2OEihIZdPl" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_"data-name="Супер Копы">
-                    <img src="img/supercops.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Супер Копы</div>
-                </a>
-                <a href="https://simpsonsua.tv/simpsony/" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_"data-name="Симпсоны Simpsons">
-                    <img src="img/thesimpsons.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Симпсоны</div>
-                </a>
-                <a href="https://simpsonsua.tv/american-dad/" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_"data-name="Американский папа American Dad">
-                    <img src="img/americanguy.jpg" class="img-fluid rounded"alt="" >
-                    <div class="title-card">Американский папа</div>
-                </a>
-                <a href="https://simpsonsua.tv/simyanyn/" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_"data-name="Гриффины Griffin family">
-                    <img src="img/griffinfamily.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Гриффины</div>
-                </a>  
-                <a href="https://simpsonsua.tv/spongebob/" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Sponge bob Губка Боб">
-                    <img src="img/spongebob.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Sponge bob</div>
-                </a>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="">
-                    <img src="img/mulan.webp" class="img-fluid rounded"alt="">
-                    <div class="title-card">Mulan</div>
-                    <div class="part">
-                        <a href="https://rezka.ag/ua/cartoons/adventures/1238-mulan-1998.html" class="number-part d-block" target="blank_">1 part</a>
-                        <a href="https://rezka.ag/ua/cartoons/action/1239-mulan-2-2004.html" class="number-part d-block" target="blank_">2 part</a>
-                    </div>
-                    </div>
-                <a href="https://www.youtube.com/playlist?list=PL8rBw7Q9zdIBjBDlKLnxwP_SmNL5aq44o" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Сваты">
-                    <img src="img/svati.webp" class="img-fluid rounded"alt="">
-                    <div class="title-card">Сваты</div>
-                </a>
-                <a href="https://rezka.ag/ua/films/fiction/875-riddik-2013.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Ридик Riddick">
-                    <img src="img/ridik.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Riddick</div>
-                </a>
-                <a href="https://kinogo.fm/2383-uzhasajuschij-3.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Terriefier 3">
-                    <img src="img/terrifier3.webp" class="img-fluid rounded"alt="">
-                    <div class="title-card">Terrifier 3</div>
-                </a>
-                <a href="https://rezka.ag/ua/films/action/10946-hitmen-agent-47-2015.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Agent 47 агент ">
-                    <img src="img/agent47.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Agent 47</div>
-                </a>
-                <a href="https://kinogo.ec/19274-forrest-gamp.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Forest Gump форест гамп">
-                    <img src="img/forestgump.webp" class="img-fluid rounded"alt="">
-                    <div class="title-card">Forest Gump</div>
-                </a>
-                <a href="https://rezka.ag/ua/films/action/11801-hardkor-2015.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Hardcore хардкор">
-                    <img src="img/hardcore.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Hardcore</div>
-                </a>
-                <a href="https://kinogo.ec/109184-djedpul-i-rossomaha-2024.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Deadpool&wolverine дедпул&рассамаха">
-                    <img src="img/deadpool&wolverine.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Deadpool & wolverine</div>
-                </a>
-                <a href="https://kinogo.ec/17027-diktator.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Dictator диктатор">
-                    <img src="img/diktator.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Dictator</div>
-                </a>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Borat борат">
-                    <img src="img/borat.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Borat</div>
-                    <div class="part">
-                        <a href="https://kinogo.ec/30222-borat.html" class="number-part d-block" target="blank_">1 part</a>
-                        <a href="https://kinogo.ec/37539-borat-2.html" class="number-part d-block" target="blank_">2 part</a>
-                    </div>
-                </div>
-                    
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Venom веном">
-                    <img src="img/venom.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Venom</div>
-                    <div class="part">
-                        <a href="https://kinogo.ec/20339-venom-2018-hd-m1.html" class="number-part d-block" target="blank_">1 part</a>
-                        <a href="https://kinogo.ec/48919-venom-2-hd-v2.html" class="number-part d-block" target="blank_">2 part</a>
-                        <a href="https://kinogo.ec/113447-venom-3-poslednij-tanec.html" class="number-part d-block" target="blank_">3 part</a>
-                    </div>
-                </div>
-                <a href="https://kinogo.ec/34175-korolevstvo-krivyh-zerkal.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Королевство Кривых зеркал">
-                    <img src="img/Korolevstvo_Krivykh_Zerkal_poster.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Королевство Кривых Зеркал</div>
-                </a>
-                <a href="https://hdrezka.ag/series/comedy/65274-bukiny-2023.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Букины">
-                    <img src="img/bukini.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Букины</div>
-                </a>
-                <a href="https://kinogo.ec/10264-sashatanja-1.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Саша таня">
-                    <img src="img/sashatania.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Саша Таня</div>
-                </a>
-                <a href="https://www.youtube.com/playlist?list=PLdEJCePEX575899NmEFAkwDSiE7VvAuq8" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="будиночок на щастя">
-                    <img src="img/budinochok.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Будиночок на щастя</div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=OmBDyRXzmeQ" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Кураторы">
-                    <img src="img/kuratori.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Кураторы</div>
-                </a>
-                <a href="https://www.youtube.com/results?search_query=%D0%BF%D0%B0%D0%BF%D0%B0%D0%BD%D1%8C%D0%BA%D0%B8+1+%D1%81%D0%B5%D0%B7%D0%BE%D0%BD" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Папаньки">
-                    <img src="img/papanki.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Папаньки</div>
-                </a>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="Черная пантера Black panther">
-                    <img src="img/panthera.webp" class="img-fluid rounded"alt="">
-                    <div class="title-card">Black panther</div>
-                    <div class="part">
-                        <a href="https://kinogo.ec/29660-chernaja-pantera.html" class="number-part d-block" target="blank_">1 part</a>
-                        <a href="https://hdrezka.ag/films/fiction/50385-chernaya-pantera-vakanda-naveki-2022.html" class="number-part d-block" target="blank_">2 part</a>
-                    </div>
-                </div>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="transformers трансформеры">
-                        <img src="img/transformers 1.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Трансформеры</div>
-                        <div class="part">
-                            <a href="https://kinogo.uk/6716-transformery-2007.html" class="number-part d-block" target="blank_">Transformers 1</a>
-                            <a href="https://kinogo.uk/4741-transformery-mest-padshih-2009.html" class="number-part d-block" target="blank_">Transformers 2</a>
-                            <a href="https://kinogo.uk/6750-transformery-3-temnaja-storona-luny-2011.html" class="number-part d-block" target="blank_">Transformers 3</a>
-                            <a href="https://kinogo.uk/14539-transformery-jepoha-istreblenija-2014.htm" class="number-part d-block" target="blank_">Transformers 4</a>
-                            <a href="https://kinogo.uk/920-transformery-poslednij-rycar-2017.html" class="number-part d-block" target="blank_">Transformers 5</a>
-                        </div>
-                </div>  
-                <a href="https://www.youtube.com/watch?v=JM-wGk--rhU" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                    <img src="img/papik.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Папик</div>
-                </a>
-
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="">
-                    <img src="img/ivancarevich.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Иван царевич и серый волк</div>
-                    <div class="part">
-                        <a href="https://hdrezka.ag/cartoons/comedy/536-ivan-carevich-i-seryy-volk-2011.html" class="number-part d-block" target="blank_">I part</a>
-                        <a href="https://hdrezka.ag/cartoons/fantasy/965-ivan-carevich-i-seryy-volk-2-2013.html" class="number-part d-block" target="blank_">II part</a>
-                        <a href="https://hdrezka.ag/cartoons/fantasy/11436-ivan-carevich-i-seryy-volk-3-2015.html" class="number-part d-block" target="blank_">III part</a>
-                        <a href="https://hdrezka.ag/cartoons/fantasy/32822-ivan-carevich-i-seryy-volk-4-2019.html" class="number-part d-block" target="blank_">IV part</a>
-                        <a href="https://hdrezka.ag/cartoons/adventures/54838-ivan-carevich-i-seryy-volk-5-2022.html" class="number-part d-block" target="blank_">V part</a>
-                        <a href="https://hdrezka.ag/cartoons/adventures/76850-ivan-carevich-i-seryy-volk-6-2024.html" class="number-part d-block" target="blank_">VI part</a>
-                    </div>
-                    </div>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="">
-                        <img src="img/berserk.webp" class="img-fluid rounded"alt="">
-                        <div class="title-card">Берсерк. Золотой век</div>
-                        <div class="part">
-                            <a href="https://rezka.ag/animation/drama/3556-berserk-zolotoy-vek-film-i-beherit-vlastitelya-2012.html" class="number-part d-block" target="blank_">I part</a>
-                            <a href="https://rezka.ag/animation/drama/2890-berserk-zolotoy-vek-film-ii-bitva-za-doldrey-2012.html" class="number-part d-block" target="blank_">II part</a>
-                            <a href="https://rezka.ag/animation/drama/10625-berserk-zolotoy-vek-film-iii-soshestvie-2013.html" class="number-part d-block" target="blank_">III part</a>
-                        </div>
-                </div>
-                    <a href="https://hdrezka.ag/cartoons/fiction/7857-gorod-geroev-2014.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/bighero.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Город героев</div>
-                    </a>
-                    <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="">
-                        <img src="img/deadsnow.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Операция «Мертвый снег»</div>
-                        <div class="part">
-                            <a href="https://hdrezka.ag/films/thriller/2050-operaciya-mertvyy-sneg-2009.html" class="number-part d-block" target="blank_">I part</a>
-                            <a href="https://hdrezka.ag/films/action/2051-operaciya-mertvyy-sneg-2-2014.html" class="number-part d-block" target="blank_">II part</a>
-                        </div>
-                    </div>
-                    <a href="https://rezka.ag/search/?do=search&subaction=search&q=%D1%82%D1%80%D0%B8+%D0%B1%D0%BE%D0%B3%D0%B0%D1%82%D1%8B%D1%80%D1%8F" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/tribogatyria.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Три богатыря</div>
-                    </a>
-                    <a href="https://rezka.ag/films/thriller/1661-operaciya-valkiriya-2008.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-4 mt-4 me-4" target="blank_">
-                        <img src="img/valkyrie.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Valkyrie</div>
-                    </a>
-            </div>
-
-                <div class="mark-point">100 <div></div></div>
-
-            <div class="row">
-                    <a href="https://rezka.ag/films/thriller/1372-gorod-vorov-2010.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-4 mt-4 me-4" target="blank_">
-                        <img src="img/town.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">TOWN</div>
-                    </a>
-                    <a href="https://rezka.ag/films/drama/54016-oppengeymer-2023.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-4 mt-4 me-4" target="blank_">
-                        <img src="img/oppenheimer.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Oppenheimer</div>
-                    </a>
-                                        
-                    <a href="https://kinogo.biz/15514-dzhon-karter.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-4 mt-4 me-4" target="blank_" data-name="John Carter">
-                        <img src="img/johncarter.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">John Carter</div>
-                    </a>
-
-                    <a href="https://hdrezka.ag/films/comedy/1692-vprityk-2010.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/vpritik.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">В притык</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/comedy/725-my-millery-2013.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/weremillers.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Если что мы Миллеры</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/drama/1176-volk-s-uoll-strit-2013.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/wolffromwallstreet.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Волк с уолл-стрит</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/action/3079-besslavnye-ublyudki-2009-latest.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/ingloriousbustards.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Бесславные ублюдки</div>
-                    </a>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="">
-                    <img src="img/mumia.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Мумия</div>
-                    <div class="part">
-                        <a href="https://hdrezka.ag/films/adventures/6074-mumiya-1999.html" class="number-part d-block" target="blank_">1 часть</a>
-                        <a href="https://hdrezka.ag/films/adventures/3100-mumiya-vozvraschaetsya-2001.html" class="number-part d-block" target="blank_">2 часть</a>
-                        <a href="https://hdrezka.ag/films/adventures/5377-mumiya-grobnica-imperatora-drakonov-2008.html" class="number-part d-block" target="blank_">3 часть</a>
-                    </div>
-                </div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/drama/775-shou-trumana-1998.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/trumansshow.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Truman's Show</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/thriller/11489-vyzhivshiy-2015.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/revenant.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Выживший</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/drama/806-pobeg-iz-shoushenka-1994-latest.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/shawshangredemption.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Побег из шоушенга</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/drama/22757-po-soobrazheniyam-sovesti-2016.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/hacksawridge.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Hacksaw Ridge</div>
-                    </a>
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="">
-                    <img src="img/bodyguardkiller.png" class="img-fluid rounded"alt="">
-                    <div class="title-card">Телохранитель киллера</div>
-                    <div class="part">
-                        <a href="https://hdrezka.ag/films/action/24675-telohranitel-killera-2017.html" class="number-part d-block" target="blank_">1 часть</a>
-                        <a href="https://hdrezka.ag/films/action/39133-telohranitel-zheny-killera-2021.html" class="number-part d-block" target="blank_">2 часть</a>
-                    </div>
-                </div>
-                    <a href="https://hdrezka.ag/films/thriller/11352-omerzitelnaya-vosmerka-2015-latest.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/hatefull8.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Hateful eight</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/action/44774-operaciya-fortuna-iskusstvo-pobezhdat-2023-latest.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/fortuna.png" class="img-fluid rounded"alt="">
-                        <div class="title-card">Fortuna</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/action/7737-yarost-2014.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/fury.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Ярость</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/drama/4519-poezd-na-yumu-2007.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/waytoyuma.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Way to yuma</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/action/1483-troya-2004.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/troya.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Троя</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/action/828-spasti-ryadovogo-rayana-1998.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/savingprivateryan.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Спасение рядового Раяна</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/detective/1194-sem-1995.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/seven.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Se7en</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/action/770-nachalo-2010.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/inception.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Inception</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/drama/29539-zelenaya-kniga-2018-movie-1.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/greenbook.png" class="img-fluid rounded"alt="">
-                        <div class="title-card">Green Book</div>
-                    </a>
-                    <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="">
-                        <img src="img/gladiator.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Гладиатор</div>
-                        <div class="part">
-                            <a href="https://hdrezka.ag/films/action/757-gladiator-2000.html" class="number-part d-block" target="blank_">Gladiator 1</a>
-                            <a href="https://hdrezka.ag/films/action/72254-gladiator-2-2024.html" class="number-part d-block" target="blank_">Gladiator 2</a>
-                        </div>
-                    </div>
-                    <a href="https://hdrezka.ag/films/action/62706-pchelovod-2024.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/pchelovod.png" class="img-fluid rounded"alt="">
-                        <div class="title-card">Пчеловод</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/action/43219-krasnoe-uvedomlenie-2021.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/rednotice.png" class="img-fluid rounded"alt="">
-                        <div class="title-card">Красное Уведомление</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/thriller/18045-split-2016.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/split.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Cплит</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/drama/822-kriminalnoe-chtivo-1994-latest.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/pulpfiction.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Pulp Fiction</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/action/32738-prizrachnaya-shesterka-2019.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/ghostsix.png" class="img-fluid rounded"alt="">
-                        <div class="title-card">Призрачная Шестерка</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/action/33026-dzhentlmeny-2020-latest.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/gentelmans.png" class="img-fluid rounded"alt="">
-                        <div class="title-card">Gentelmans</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/drama/22888-soyuzniki-2016.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/soyuzniki.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Союзники</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/action/396-kod-dostupa-keyptaun-2012.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/codecapetown.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Код Кейптаун</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/action/974-plan-pobega-2013.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/escapeplan.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">План побега</div>
-                    </a>
-                    <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="">
-                        <img src="img/mechanic.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Механик</div>
-                        <div class="part">
-                            <a href="https://hdrezka.ag/films/action/1609-mehanik-2011.html" class="number-part d-block" target="blank_">1 часть</a>
-                            <a href="https://hdrezka.ag/films/action/17219-mehanik-voskreshenie-2016.html" class="number-part d-block" target="blank_">2 часть</a>
-                        </div>
-                    </div>
-                    <a href="https://hdrezka.ag/films/action/1477-plohie-parni-1995.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/badboys.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Bad Boys</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/comedy/3097-superpercy-2007.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/superperci.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Супер Перцы</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/detective/824-otstupniki-2006.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/otstupniki.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Отступники</div>
-                    </a>
-                    <a href="https://hdrezka.ag/films/detective/807-advokat-dyavola-1997.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                        <img src="img/devilsalyer.jpg" class="img-fluid rounded"alt="">
-                        <div class="title-card">Адвокат Дьявола</div>
-                    </a>
-                    <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="">
-                    <img src="img/taken.jpg" class="img-fluid rounded"alt="">
-                    <div class="title-card">Заложница</div>
-                    <div class="part">
-                        <a href="https://hdrezka.ag/films/action/513-zalozhnica-2008.html" class="number-part d-block" target="blank_">1 часть</a>
-                        <a href="https://hdrezka.ag/films/action/521-zalozhnica-2-2012.html" class="number-part d-block" target="blank_">2 часть</a>
-                        <a href="https://hdrezka.ag/films/action/7679-zalozhnica-3-2014.html" class="number-part d-block" target="blank_">3 часть</a>
-                    </div>
-                </div>
-                <a href="https://hdrezka.ag/films/action/76772-master-2025-latest.html" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                    <img src="img/master.webp" class="img-fluid rounded"alt="">
-                    <div class="title-card">Мастер</div>
-                </a>
+        <div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3 " data-name="Hugo Spritz">
+            <img class="img-fluid img " src="img/hugo.png" alt="Cocktail img">
+            <div class="cocktail-name">Hugo Spritz</div>
+            <div class="contains">                   
+                <div class="ingredient" data-name="Lime">lime pieces (2-3)</div>                    
+                <div class="ingredient" data-name="Mint">Mint - 4-5 leaves</div>                                       
+                <div class="ingredient" data-name="Lemon juice"><b>15ml</b> - lemon juice</div>                    
+                <div class="ingredient" data-name="Elderflower liqueur"><b>20ml</b> - elderflower liqueur</div>                    
+                <div class="ingredient" data-name="Prosecco"><b>120ml</b> - prosecco</div>                    
+                <div class="ingredient" data-name="Sparkling water">Sparkling water</div> 
+                <div class="ingredient" data-name="Mint">Garnish: mint </div> 
+                
         </div>
     </div>
 
-    <footer>Made by <a href="egorkryvoi.pl">egorkryvoi.pl</a></footer>
+    <div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3 " data-name="Electric lemonade">
+        <img class="img-fluid img " src="img//electric cocktail.png" alt="Cocktail img">
+        <div class="cocktail-name">Electric lemonade</div>
+        <div class="contains">
+            <div class="ingredient">Shaker:</div>                    
+            <div class="ingredient" data-name="Tequila"><b>40ml</b> - Silver Tequila</div>                    
+            <div class="ingredient" data-name="Lemon juice"><b>30ml</b> - lemon juice</div>                    
+            <div class="ingredient" data-name="Blue curacao"><b>20ml</b> - blue curacao</div>                    
+            <div class="ingredient">Shaking</div>                    
+            <div class="ingredient" data-name="Sprite">Sprite top up</div>                    
+        </div>
+</div>
+          
+    <div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3 " data-name="Mojito">
+        <img class="img-fluid img " src="img/mojito.png" alt="Cocktail img">
+        <div class="cocktail-name">Mojito</div>
+        <div class="contains">
+            <div class="ingredient" data-name="Lime">4 Lime</div>                    
+            <div class="ingredient" data-name="Simple syrup"><b>20ml</b> - simple syrup</div>                    
+            <div class="ingredient" data-name="White rum"><b>40ml</b> - white rum </div>                                       
+            <div class="ingredient" data-name="Mint">Mint leaves (8-10)</div>                               
+            <div class="ingredient" data-name="Sparkling water">Sparkling water top up</div>                    
+    </div>
+    </div>
+
+    <div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3 " data-name="Negroni">
+        <img class="img-fluid img " src="img/negroni.png" alt="Cocktail img">
+        <div class="cocktail-name">Negroni</div>
+        <div class="contains">
+            <div class="ingredient" data-name="Gin"><b>30ml</b> - Gin</div>                    
+            <div class="ingredient" data-name="Campari bitters"><b>30ml</b> - Campari</div>                    
+            <div class="ingredient" data-name="Sweet Vermouth"><b>30ml</b> - Sweet Vermouth</div>                                       
+            <div class="ingredient" data-name="Orange zest">Garnish: orange zest</div>                    
+    </div>
+</div>
+
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Tom Colin's">
+    <img class="img-fluid img " src="img/tom-colin's.png" alt="Cocktail img">
+    <div class="cocktail-name">Tom Colin's</div>
+    <div class="contains">
+        <div class="ingredient" data-name="Gin"><b>40ml</b> - Gin</div>                    
+        <div class="ingredient" data-name="Lemon juice"><b>20ml</b> - lemon juice</div>                                       
+        <div class="ingredient" data-name="Simple syrup"><b>10ml</b> - simple syrup</div>                    
+        <div class="ingredient" data-name="Sparkling water">Top up Sparkling water</div>   
+        <div class="ingredient">Garnish: lemon piece</div>                    
+</div>
+</div>
+
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Bittercello Spritz">
+    <img class="img-fluid img " src="img/bittercello.png" alt="Cocktail img">
+    <div class="cocktail-name">Bittercello Spritz</div>
+    <div class="contains">
+        <div class="ingredient" data-name="Sweet Vermouth"><b>40ml</b> - Sweet Vermouth</div>                                       
+        <div class="ingredient" data-name="Lemon juice"><b>20ml</b> - lemon juice</div>                    
+        <div class="ingredient" data-name="Prosecco"><b>160ml</b> - prosecco</div>                    
+        <div class="ingredient" data-name="Sparkling water">Sparkling water top up</div>                    
+        <div class="ingredient" data-name="Grapefruit">Garnish: Grapefruit piece</div>                    
+</div>
+</div>
+
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Cosmopolitan">
+    <img class="img-fluid img " src="img/cosmopolitan.png" alt="Cocktail img">
+    <div class="cocktail-name">Cosmopolitan</div>
+    <div class="contains">
+        <div class="ingredient">Shaker:</div>                    
+        <div class="ingredient" data-name="Vodka"><b>40ml</b> - vodka</div>                    
+        <div class="ingredient" data-name="Triple sec"><b>20ml</b> - triple sec</div>                                       
+        <div class="ingredient" data-name="Lime juice"><b>15ml</b> - lime juice</div>                    
+        <div class="ingredient" data-name="Cranberry"><b>30ml</b> - cranberry</div>                    
+        <div class="ingredient" data-name="Lime">Garnish: Lime piece</div>                    
+</div>
+</div>
+
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3 " data-name="French 75'">
+    <img class="img-fluid img " src="img/french 75.png" alt="Cocktail img">
+    <div class="cocktail-name">French 75'</div>
+    <div class="contains">               
+        <div class="ingredient" data-name="Gin"><b>30ml</b> - gin</div>                    
+        <div class="ingredient" data-name="Lemon juice"><b>20ml</b> - lemon juice</div>                    
+        <div class="ingredient" data-name="Simple syrup"><b>10ml</b> - simple suryp</div>                                                                            
+        <div class="ingredient" data-name="Prosecco">Prosecco top up</div>
+        <div class="ingredient" data-name="Lemon zest">Garnish: Lemon zest</div>
+</div>
+</div>
+
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3 " data-name="Long Island">
+    <img class="img-fluid img " src="img/long island.png" alt="Cocktail img">
+    <div class="cocktail-name">Long Island Ice Tea</div>
+    <div class="contains">
+        <div class="ingredient" data-name="Triple sec"><b>20ml</b> - Triple sec</div>                    
+        <div class="ingredient" data-name="Vodka"><b>20ml</b> - Vodka</div>                    
+        <div class="ingredient" data-name="White rum"><b>20ml</b> - White Rum</div>                    
+        <div class="ingredient" data-name="Gin"><b>20ml</b> - Gin</div>                    
+        <div class="ingredient" data-name="Tequila"><b>20ml</b> - Tequila</div>                    
+        <div class="ingredient" data-name="Lemon juice"><b>20ml</b> - lemon juice</div>                    
+        <div class="ingredient" data-name="Simple syrup"><b>20ml</b> - simple syrup</div>                                       
+        <div class="ingredient" data-name="Coca cola">Cola top up</div>  
+        <div class="ingredient" data-name="Lemon">Garnish: lemon piece</div>                     
+</div>
+</div>
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3 " data-name="Lynchburg Lemonade">
+    <img class="img-fluid img " src="img/lynchburg lemonade.png" alt="Cocktail img">
+    <div class="cocktail-name">Lynchburg Lemonade</div>
+    <div class="contains">
+        <div class="ingredient">Shaker:</div>                                       
+        <div class="ingredient" data-name="Whiskey"><b>40ml</b> - Whiskey</div>                    
+        <div class="ingredient" data-name="Triple sec"><b>20ml</b> - triple sec</div>                    
+        <div class="ingredient" data-name="Simple syrup"><b>20ml</b> - simple syrup</div>                    
+        <div class="ingredient" data-name="Lemon juice"><b>10ml</b> - lemon juice</div>                    
+        <div class="ingredient" data-name="Lemon">Garnish: Lemon piece</div>                    
+</div>
+</div>
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Margarita">
+    <img class="img-fluid img " src="img/margarita.png" alt="Cocktail img">
+    <div class="cocktail-name">Margarita</div>
+    <div class="contains">
+        <div class="ingredient" data-name="Salt">Garnish: Salt ring</div>                    
+        <div class="ingredient" data-name="Tequila"><b>40ml</b> - tequila</div>                    
+        <div class="ingredient" data-name="Triple sec"><b>20ml</b> - triple sec</div>  
+        <div class="ingredient" data-name="Lime juice"><b>10ml</b> - lime juice</div>                                                        
+        <div class="ingredient" data-name="Agave syrup"><b>5ml</b> - agave syrup(optional)</div>                                                        
+</div>
+</div>
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Old Fashioned">
+    <img class="img-fluid img " src="img/old fashioned.png" alt="Cocktail img">
+    <div class="cocktail-name">Old Fashioned</div>
+    <div class="contains">
+        <div class="ingredient" data-name="Whiskey"><b>50ml</b> - Whiskey</div>                                       
+        <div class="ingredient" data-name="Simple syrup"><b>10 ml</b> - simple syrup</div>                    
+        <div class="ingredient" data-name="Angostura bitters"><b>3 dashes</b> - angostura bitters</div>                    
+        <div class="ingredient" data-name="Orange zest">Garnish: Orange zest</div>                    
+</div>
+</div>
+
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Pina Colada">
+    <img class="img-fluid img " src="img/pinacolada.png" alt="Cocktail img">
+    <div class="cocktail-name">Piña Colada</div>
+    <div class="contains">
+        <div class="ingredient">Shaker:</div>                    
+        <div class="ingredient" data-name="White rum"><b>40ml</b> - white rum</div>                                       
+        <div class="ingredient" data-name="Coconut syrup"><b>20ml</b> - coconut syrup</div>                    
+        <div class="ingredient" data-name="Pineapple juice"><b>100ml</b> - pineapple juice</div>                    
+        <div class="ingredient" data-name="Pineapple">Garnish: Pineapple piece</div>                                       
+</div>
+</div>
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Planters Punch">
+    <img class="img-fluid img " src="img/planterspunch.png" alt="Cocktail img">
+    <div class="cocktail-name">Planter's Punch</div>
+    <div class="contains">
+        <div class="ingredient" data-name="Simple syrup"><b>15ml</b> - simple syrup</div>                    
+        <div class="ingredient" data-name="Grenadine"><b>15ml</b> - grenadine </div>                    
+        <div class="ingredient" data-name="Lemon juice"><b>15ml</b> - lemon juice</div>                                       
+        <div class="ingredient" data-name="Black rum"><b>50ml</b> - bacardi black</div>                    
+        <div class="ingredient" data-name="Angostura bitters"><b>3 dashes</b> angostura </div>    
+        <div class="ingredient" data-name="Orange juice">Orange juice top up</div>    
+        <div class="ingredient">Garnish:Dryied out apple, Cinnamon, powdered sugar, put on fire</div>    
+                        
+</div>
+</div>
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3 " data-name="PornStar Martini">
+    <img class="img-fluid img " src="img/pornstarmartini.png" alt="Cocktail img">
+    <div class="cocktail-name">PornStar Martini</div>
+    <div class="contains">
+        <div class="ingredient">Shaker:</div>                    
+        <div class="ingredient" data-name="Vanilia Vodka"><b>40ml</b> - Vanilia Vodka</div>                                                          
+        <div class="ingredient" data-name="Lemon juice"><b>20ml</b> - lemon juice</div>                                    
+        <div class="ingredient" data-name="Passion fruit syrup"><b>10ml</b> - Passion fruit syrup</div>                                                          
+        <div class="ingredient" data-name="Vanilia syrup"><b>10ml</b> - Vanilia syrup</div>                                                          
+        <div class="ingredient" data-name="Passion fruit">Garnish: Passion fruit piece 1/2</div>                    
+        <div class="ingredient" data-name="Prosecco">Shot of prosecco</div>                    
+</div>
+</div>
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Sex on the beach">
+    <img class="img-fluid img " src="img/sex on the beach.png" alt="Cocktail img">
+    <div class="cocktail-name">Sex on the beach</div>
+    <div class="contains">
+        <div class="ingredient" data-name="Cranberry syrup"><b>15ml</b> - cranberry syrup</div>         
+        <div class="ingredient" data-name="Vodka"><b>40ml</b> - vodka</div>                    
+        <div class="ingredient" data-name="Peach liqueur"><b>20ml</b> - peach liqueur</div>                    
+        <div class="ingredient" data-name="Coconut liqueur"><b>20ml</b> - Coconut liqueur</div>                                       
+        <div class="ingredient" data-name="Orange juice">Orange juice top up</div>                    
+        <div class="ingredient" data-name="Orange zest">Garnish: Orange zest</div>         
+                   
+</div>
+</div>
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3 " data-name="Daiquiri">
+    <img class="img-fluid img " src="img/daiquiri.png" alt="Cocktail img">
+    <div class="cocktail-name">Daiquiri</div>
+    <div class="contains">
+        <div class="ingredient">Shaker:</div>                   
+        <div class="ingredient" data-name="White rum"><b>50ml</b> - white rum</div>                   
+        <div class="ingredient" data-name="Lime juice"><b>20ml</b> - lime juice</div>                   
+        <div class="ingredient" data-name="Simple syrup"><b>10ml</b> - sugar syrup</div>                                    
+        <div class="ingredient" data-name="Lime zest">Garnish: Lime zest</div>                   
+</div>
+</div>
+
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Black russian">
+    <img class="img-fluid img " src="img/blackrussian.png" alt="Cocktail img">
+    <div class="cocktail-name">Black Russian</div>
+    <div class="contains">                 
+        <div class="ingredient" data-name="Vodka"><b>40ml</b> - vodka</div>                   
+        <div class="ingredient" data-name="Coffee liqueur"><b>20ml</b> - coffee liqueur</div>                   
+        <div class="ingredient" data-name="Coca cola">Cola top up</div>                   
+        <div class="ingredient" data-name="Cherry">Garnish: maraschino cherry</div>                   
+</div>
+</div>
+
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Bellini">
+    <img class="img-fluid img" src="img/bellini.png" alt="Cocktail img">
+    <div class="cocktail-name">Bellini</div>
+    <div class="contains">
+        <div class="ingredient" data-name="Prosecco"><b>120ml</b> - prosseco</div>                                  
+        <div class="ingredient" data-name="Peach puree"><b>30ml</b> - Peach puree</div>                   
+        <div class="ingredient" data-name="Lemon juice"><b>10ml</b> - lemon juice</div>                   
+        <div class="ingredient" data-name="Simple syrup"><b>5ml</b> - simple syrup</div>                   
+        <div class="ingredient" data-name="Peach">Garnish: peach piece</div>                   
+</div>
+</div>
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Hurricane">
+    <img class="img-fluid img " src="img/hurricane.png" alt="Cocktail img">
+    <div class="cocktail-name">Hurricane</div>
+    <div class="contains">
+        <div class="ingredient">Shaker: </div>                   
+        <div class="ingredient" data-name="Black rum"><b>40ml</b> - black rum</div>                   
+        <div class="ingredient" data-name="White rum"><b>40ml</b> - white rum</div>                   
+        <div class="ingredient" data-name="Lemon juice"><b>30ml</b> - lemon juice</div>                   
+        <div class="ingredient" data-name="Orange juice"><b>30ml</b> - orange juice</div>                   
+        <div class="ingredient" data-name="Passion fruit syrup"><b>20ml</b> - passion fruit syrup</div>                   
+        <div class="ingredient" data-name="Simple syrup"><b>10ml</b> - simple syrup</div>                   
+        <div class="ingredient" data-name="Grenadine"><b>10ml</b> - grenadine</div>                   
+        <div class="ingredient" data-name="Orange">Garnish: orange slice, passion fruit, mint</div>                   
+</div>
+</div>
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="whiskey sour">
+    <img class="img-fluid img " src="img/whiskeysour.png" alt="Cocktail img">
+    <div class="cocktail-name">Whiskey Sour</div>
+    <div class="contains">                 
+        <div class="ingredient" data-name="Whiskey"><b>40ml</b> - Whiskey</div>                   
+        <div class="ingredient" data-name="Lemon juice"><b>30ml</b> - Lemon juice</div>                   
+        <div class="ingredient" data-name="Simple syrup"><b>20ml</b> - Simple syrup</div>                   
+        <div class="ingredient" data-name="Egg white"><b>20ml</b> - Egg white</div>                   
+        <div class="ingredient" data-name="Angostura Bitters"><b>1 dashes</b> - Angostura bitters</div>                   
+        <div class="ingredient" data-name="Orange zest">Garnish: Orange zest/piece</div>                   
+              
+</div>
+</div>
+
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Gin Fizz">
+    <img class="img-fluid img " src="img/ginfizz.png" alt="Cocktail img">
+    <div class="cocktail-name">Gin Fizz</div>
+    <div class="contains">                 
+        <div class="ingredient">Shaker: </div>                   
+        <div class="ingredient" data-name="Gin"><b>40ml</b> - Gin</div>                   
+        <div class="ingredient" data-name="Egg white"><b>25ml</b> - Egg white</div>                   
+        <div class="ingredient" data-name="Simple syrup"><b>20ml</b> - Simple syrup</div>                   
+        <div class="ingredient" data-name="Lemon juice"><b>20ml</b> - Lemon juice</div>                   
+        <div class="ingredient" data-name="Lemon zest">Garnish: Lemon zest</div>                   
+              
+</div>
+</div>
+
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Gin Tonic">
+    <img class="img-fluid img " src="img/gintonic.png" alt="Cocktail img">
+    <div class="cocktail-name">G&T</div>
+    <div class="contains">                                    
+        <div class="ingredient" data-name="Gin"><b>60ml</b> - Gin</div>                   
+        <div class="ingredient" data-name="Tonic">Top up tonic</div>                   
+        <div class="ingredient" data-name="Rosemary">Garnish: Rosemary piece </div>                           
+</div>
+</div>
+
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Espresso Martini">
+    <img class="img-fluid img " src="img/espressomartini.png" alt="Cocktail img">
+    <div class="cocktail-name">Espresso Martini</div>
+    <div class="contains">                 
+        <div class="ingredient"> Shaker: </div>                   
+        <div class="ingredient" data-name="Vodka"><b>40ml</b> - Vodka</div>                   
+        <div class="ingredient" data-name="Coffee liqueur"><b>20ml</b> - Coffee liqueur</div>                   
+        <div class="ingredient" data-name="Simple syrup"><b>10ml</b> - simpe syrup</div>                   
+        <div class="ingredient" data-name="Espresso">Shot espresso</div>                   
+        <div class="ingredient" data-name="Coffee beans">Garnish: 3 coffee beans</div>                   
+              
+</div>
+</div>
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="New york sour">
+    <img class="img-fluid img " src="img/newyorksour.png" alt="Cocktail img">
+    <div class="cocktail-name">New York Sour</div>
+    <div class="contains">                 
+        <div class="ingredient" data-name="Whiskey"><b>40ml</b> - Whiskey</div>                   
+        <div class="ingredient" data-name="Lemon juice"><b>30ml</b> - Lemon juice</div>                   
+        <div class="ingredient" data-name="Simple syrup"><b>20ml</b> - Simple syrup</div>                   
+        <div class="ingredient" data-name="Egg white"><b>20ml</b> - Egg white</div>                   
+        <div class="ingredient" data-name="Angostura Bitters"><b>1 dashes</b> - Angostura bitters</div>                   
+        <div class="ingredient" data-name="Red wine"><b>15ml</b> - Red wine(dry)</div>                   
+        <div class="ingredient" data-name="Orange zest">Garnish: Orange zest/piece</div>                        
+              
+</div>
+</div>
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Dirty Martini">
+    <img class="img-fluid img " src="img/dirtymartini.png" alt="Cocktail img">
+    <div class="cocktail-name">Dirty Martini</div>
+    <div class="contains">                                 
+        <div class="ingredient" data-name="Gin"><b>60ml</b> - Gin</div>                   
+        <div class="ingredient" data-name="Extra Dry Vermouth"><b>20ml</b> - Extra Dry Vermouth</div>                   
+        <div class="ingredient" data-name="Olives brine"><b>20ml</b> - olives brine(sok)</div>                   
+        <div class="ingredient" data-name="Olives">Garnish: 3-4 olives skewers</div>                   
+              
+</div>
+</div>
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Manhattan">
+    <img class="img-fluid img " src="img/manhattan.png" alt="Cocktail img">
+    <div class="cocktail-name">Manhattan</div>
+    <div class="contains">                 
+        <div class="ingredient" data-name="Whiskey"><b>40ml</b> - Whiskey</div>                   
+        <div class="ingredient" data-name="Sweet Vermouth"><b>20ml</b> - Martini Rubino</div>                  
+        <div class="ingredient" data-name="Angostura bitters"><b>2 dash</b> - Angostura bitters</div>                  
+        <div class="ingredient" data-name="Maraschino">Garnish: Marashino cherry</div>                  
+</div>
+</div>
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Caipirinha">
+    <img class="img-fluid img " src="img/caipirinha.png" alt="Cocktail img">
+    <div class="cocktail-name">Caipirinha</div>
+    <div class="contains">                 
+        <div class="ingredient" data-name="Lime"><b>4 Lime</b> - wedges</div>                   
+        <div class="ingredient" data-name="Cachaça"><b>40ml</b> - Cachaça</div>                   
+        <div class="ingredient" data-name="Simple syrup"><b>5ml</b> - Simple syrup</div>                   
+              
+</div>
+</div>
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="White Russian">
+    <img class="img-fluid img " src="img/white russian.png" alt="Cocktail img">
+    <div class="cocktail-name">White Russian</div>
+    <div class="contains">                 
+        <div class="ingredient" data-name="Vodka"><b>40ml</b> - Vodka</div>                   
+        <div class="ingredient" data-name="Coffee liqueur"><b>20ml</b> - Coffee liqueur</div>                   
+        <div class="ingredient" data-name="Milk"><b>20ml</b> - Shaked Milk</div>                   
+</div>
+</div>
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Orgasm">
+    <img class="img-fluid img " src="img/orgasm.png" alt="Cocktail img">
+    <div class="cocktail-name">Orgasm</div>
+    <div class="contains">                 
+        <div class="ingredient" data-name="Baileys"><b>30ml</b> - Baileys</div>                   
+        <div class="ingredient" data-name="Coffee liqueur"><b>30ml</b> - Coffee liqueur</div>                   
+        <div class="ingredient" data-name="Milk"><b>30ml</b> - Milk</div>                   
+        <div class="ingredient" data-name="Coffee beans">Garnish: coffee beans</div>                   
+              
+</div>
+</div>
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Old Cuban">
+    <img class="img-fluid img " src="img/old cuban.png" alt="Cocktail img">
+    <div class="cocktail-name">Old Cuban</div>
+    <div class="contains">                 
+        <div class="ingredient" data-name="White rum"><b>40ml</b> - Bacardi Reserva Ocho</div>                   
+        <div class="ingredient" data-name="Lime juice"><b>20ml</b> - Lime juice</div>                   
+        <div class="ingredient" data-name="Simple syrup"><b>10ml</b> - Simple syrup</div>                   
+        <div class="ingredient" data-name="Angostura bitters"><b>2 dash</b> - Angostura bitters</div>                   
+        <div class="ingredient" data-name="Mint"><b>4-6 </b> - Mint leaves</div>                   
+              
+</div>
+</div>
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Gin Basil Smash">
+    <img class="img-fluid img " src="img/ginbasil.png" alt="Gin basil smash">
+    <div class="cocktail-name">Gin Basil Smash</div>
+    <div class="contains">                 
+        <div class="ingredient" data-name="Gin"><b>40ml</b> - Gin</div>                   
+        <div class="ingredient" data-name="Lemon juice"><b>30ml</b> - Lemon juice</div>                   
+        <div class="ingredient" data-name="Simple syrup"><b>20ml</b> - Simple syrup</div>                   
+        <div class="ingredient" data-name="Basil"><b>4-6 leaves</b> - Basil</div>                   
+        <div class="ingredient" data-name="Basil">Garnish: Basil Leaves </div>                   
+              
+</div>
+</div>
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Martini">
+    <img class="img-fluid img " src="img/martini.png" alt="Martini img">
+    <div class="cocktail-name">Martini</div>
+    <div class="contains">                 
+        <div class="ingredient" data-name="Gin"><b>60ml</b> - Gin</div>                   
+        <div class="ingredient" data-name="Extra Dry Vermouth"><b>20ml</b> - Extra Dry Vermouth</div>                   
+        <div class="ingredient" data-name="Olives"><b>4</b> - olives</div>                   
+              
+</div>
+</div>
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Tequila sunrise">
+    <img class="img-fluid img " src="img/tequilasunrise.png" alt="cocktail img">
+    <div class="cocktail-name">Tequila Sunrise</div>
+    <div class="contains">                 
+        <div class="ingredient" data-name="Tequila"><b>40ml</b> - tequila</div>                   
+        <div class="ingredient" data-name="Orange juice">Orange juice top up </div>                   
+        <div class="ingredient" data-name="Grenadine"><b>15ml</b> - Grenadine</div>                   
+        <div class="ingredient" data-name="Orange">Garnish: orange piece </div>                   
+              
+</div>
+</div>
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="">
+    <img class="img-fluid img " src="img/amaretto sour.png" alt="">
+    <div class="cocktail-name">Amaretto sour</div>
+    <div class="contains">                 
+        <div class="ingredient" data-name="Amaretto"><b>40ml</b> - amaretto</div>                   
+        <div class="ingredient" data-name="Lemon juice"><b>30ml</b> - lemon juice</div>                   
+        <div class="ingredient" data-name="Simple syrup"><b>10ml</b> - simple syrup</div>                   
+        <div class="ingredient" data-name="Whiskey"><b>20ml</b> - whiskey</div>                   
+        <div class="ingredient" data-name="Angostura bitters"><b>dash</b> - angostura bitters</div>                   
+        <div class="ingredient" data-name="Egg white"><b>20ml</b> - egg white</div>                   
+              
+</div>
+</div>
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Mai Tai">
+    <img class="img-fluid img " src="img/maitai.png" alt="cocktail img">
+    <div class="cocktail-name">Mai Tai</div>
+    <div class="contains">                 
+        <div class="ingredient" data-name="White Rum"><b>30ml</b> - White Rum</div>                   
+        <div class="ingredient" data-name="Black Rum"><b>30ml</b> - Black Rum</div>                   
+        <div class="ingredient" data-name="Triple sec"><b>15ml</b> - Triple sec</div>                   
+        <div class="ingredient" data-name="Orgeat syrup"><b>15ml</b> - Orgeat syrup</div>                   
+        <div class="ingredient" data-name="Lime juice"><b>30ml</b> - Lime juice</div>                   
+        <div class="ingredient" data-name="Lime Mint">Garnish: Mint/Lime</div>                   
+              
+</div>
+</div>
+<!--
+
+<div class="cocktail card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="">
+    <img class="img-fluid img " src="img/" alt="">
+    <div class="cocktail-name"></div>
+    <div class="contains">                 
+        <div class="ingredient" data-name=""><b>ml</b> - </div>                   
+        <div class="ingredient" data-name=""><b>ml</b> - </div>                   
+              
+</div>
+</div>
+
+        <div class="shot card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="">
+            <img class="img-fluid img " src="img/" alt="">
+            <div class="shot-name"></div>
+            <div class="contains">
+                <div class="ingredient" data-name=""><b></b></div>                                              
+        </div>
+        </div>
+
+-->
+
+</div>
+    <div class="shots-container container col-lg-10 col-md-10 col-sm-10" >
+    <div class="row mx-3 cocktails-container ">
+        <div class="shot card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Blue Kamikaze">
+            <img class="img-fluid img " src="img/bluekamikaze.png" alt="shot img">
+            <div class="shot-name">Blue Kamikaze</div>
+            <div class="contains">
+                <div class="ingredient">Shaker:</div>                        
+                <div class="ingredient" data-name="Vodka"><b>20ml</b> - vodka</div>                        
+                <div class="ingredient" data-name="Blue curacao"><b>10ml</b> - blue curacao</div>                        
+                <div class="ingredient" data-name="Lime juice"><b>10ml</b> - lime juice</div>                                               
+        </div>
+        </div>
+
+
+        <div class="shot card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Kamikaze">
+            <img class="img-fluid img " src="img/kamikaze.png" alt="shot img">
+            <div class="shot-name">Kamikaze</div>
+            <div class="contains">
+                <div class="ingredient" data-name="Vodka"><b>20ml</b> - vodka</div>                        
+                <div class="ingredient" data-name="Triple sec"><b>10ml</b> - Triple sec</div>                        
+                <div class="ingredient" data-name="Lime juice"><b>10ml</b> - lime juice</div>                        
+        </div>
+        </div>
+
+
+        <div class="shot card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Woo Woo">
+            <img class="img-fluid img " src="img/woowoo.png" alt="shot img">
+            <div class="shot-name">Woo Woo</div>
+            <div class="contains">
+                <div class="ingredient" data-name="Peach liqueur"><b>20ml</b> - Peach liqueur</div>                        
+                <div class="ingredient" data-name="Vodka"><b>20ml</b> - vodka</div>                        
+                <div class="ingredient" data-name="Cranberry syrup"><b>10ml</b> - Cranberry syrup</div>                        
+        </div>
+        </div>
+        <div class="shot card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Lemon Drop">
+            <img class="img-fluid img " src="img/lemondrop.png" alt="shot img">
+            <div class="shot-name">Lemon Drop</div>
+            <div class="contains">
+                <div class="ingredient" data-name="Vodka"><b>20ml</b> - vodka</div> 
+                <div class="ingredient" data-name="Lemon juice"><b>20ml</b> - lemon juice</div> 
+                <div class="ingredient" data-name="Simple syrup"><b>7.5ml</b> - simple syrup</div>                                           
+        </div>
+        </div>
+        <div class="shot card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Ginger slut">
+            <img class="img-fluid img " src="img/gingerslut.png" alt="shot img">
+            <div class="shot-name">Ginger slut</div>
+            <div class="contains">
+                <div class="ingredient" data-name="Jagermeister"><b>15ml</b> - Jagermeister</div>                                              
+                <div class="ingredient" data-name="Peach liqueur"><b>15ml</b> - Peach liqueur</div>                                              
+                <div class="ingredient" data-name="Cranberry syrup"><b>15ml</b> - Cranberry syrup</div>                                              
+                                                             
+        </div>
+        </div>
+            <div class="shot card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Cloud">
+                    <img class="img-fluid img " src="img/cloud.png" alt="shot img">
+                    <div class="shot-name">Cloud</div>
+                    <div class="contains">
+                        <div class="ingredient" data-name="Peach liqueur"><b>1/2</b> - peach liqueur</div>                                              
+                        <div class="ingredient" data-name="Vodka"><b>1/2</b> - vodka</div>                                              
+                        <div class="ingredient" data-name="Milk"><b>3 drops</b> - milk</div>                                              
+                    </div>
+            </div>
+            <div class="shot card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Monkey Brain">
+                    <img class="img-fluid img " src="img/monkey brain.png" alt="shot img">
+                    <div class="shot-name">Monkey Brain</div>
+                    <div class="contains">
+                        <div class="ingredient" data-name="Peach liqueur"><b>1/2</b> - peach liqueur</div>                                              
+                        <div class="ingredient" data-name="Baileys"><b>1/2</b> - Baileys</div>                                              
+                        <div class="ingredient" data-name="Grenadine"><b>3 drops</b> - grenadine(strow)</div>                                                                                         
+                    </div>
+            </div>
+            <div class="shot card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Hiroshima">
+                    <img class="img-fluid img " src="img/hiroshima.png" alt="shot img">
+                    <div class="shot-name">Hiroshima</div>
+                    <div class="contains">
+                        <div class="ingredient" data-name="Sambuca"><b>20ml</b> - sambuca</div>                                              
+                        <div class="ingredient" data-name="Baileys"><b>10ml</b> - Baileys</div>                                              
+                        <div class="ingredient" data-name="Abscenthe"><b>20ml</b> - abscenthe</div>                                              
+                        <div class="ingredient" data-name="Grenadine"><b>3 drops</b> - grenadine</div>                                              
+                    </div>
+            </div>
+            <div class="shot card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Hiroshima">
+                    <img class="img-fluid img " src="img/b-52.png" alt="shot img">
+                    <div class="shot-name">B-52</div>
+                    <div class="contains">
+                        <div class="ingredient" data-name="Coffee liqueur"><b>1/3</b> - Coffee liqueur</div>                                              
+                        <div class="ingredient" data-name="Baileys"><b>1/3</b> - Baileys</div>                                              
+                        <div class="ingredient" data-name="Triple sec"><b>1/3</b> - Triple sec</div>                                              
+                                           
+                    </div>
+            </div>
+                <div class="shot card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Russian Heroine">
+                        <img class="img-fluid img " src="img/ruska heroina.png" alt="shot img">
+                        <div class="shot-name">Russian Heroine</div>
+                        <div class="contains">
+                    <div class="ingredient" data-name="Coffee liqueur"><b>1/2</b> -  coffee liqueur</div>                                              
+                    <div class="ingredient" data-name="Abscenthe"><b>1/2</b> - Abscenthe</div>                                                                                          
+                </div>
+                </div>
+
+                <div class="shot card col-sm-10 col-md-4 col-lg-2 pt-2 mt-3 me-3 mb-3" data-name="Black&Orange">
+                        <img class="img-fluid img " src="img/blackandorange.png" alt="shot img">
+                        <div class="shot-name">Black&Orange</div>
+                        <div class="contains">
+                    <div class="ingredient" data-name="Amaretto"><b>1/3</b> - Amaretto</div>                                              
+                    <div class="ingredient" data-name="Orange juice"><b>1/3</b> - Orange juice</div>                                                                                          
+                    <div class="ingredient" data-name="Jagermeister"><b>1/3</b> - Jagermeister</div>                                                                                          
+                </div>
+                </div>
+    </div>
+    </div>
+    
+
+</div>
 </div>
 </div>
 </body>
-
-
-          <!--
-
-                <a href="" class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_">
-                    <img src="img/" class="img-fluid rounded"alt="">
-                    <div class="title-card"></div>
-                </a>
-
-
-
-
-                <div class="card rounded col-md-4 col-lg-2 px-2 pt-2 mx-3 mt-3 me-3" target="blank_" data-name="">
-                    <img src="img/" class="img-fluid rounded"alt="">
-                    <div class="title-card"></div>
-                    <div class="part">
-                        <a href="" class="number-part d-block" target="blank_"></a>
-                        <a href="" class="number-part d-block" target="blank_"></a>
-                    </div>
-                </div>
-
-            --> 
-
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 <script src="script.js"></script>
 </html>
-
-
-
-
